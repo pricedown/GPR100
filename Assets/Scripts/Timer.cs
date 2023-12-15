@@ -10,6 +10,16 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private float countDown;
     private bool counting = false;
+
+    public float GetCountDown()
+    {
+        return countDown; 
+    }
+
+    public bool isDone()
+    {
+        return (countDown == 0) && (counting);
+    }
     
     void Start()
     {
@@ -21,7 +31,7 @@ public class Timer : MonoBehaviour
     {
         if (counting)
         {
-            countDown -= Time.fixedDeltaTime;
+            countDown -= Time.fixedDeltaTime * Time.timeScale;
             if (countDown <= 0f)
             {
                 // TODO: end the run
