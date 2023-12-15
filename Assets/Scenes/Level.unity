@@ -1100,7 +1100,7 @@ MonoBehaviour:
   boundsOne: {x: -10, y: -5}
   boundsTwo: {x: 10, y: 5}
   respawnPrefab: {fileID: 5849243574841479766, guid: 02fb1b3fd62a42feabe42689d81faa6b, type: 3}
-  instancesAtOnce: 2
+  instancesAtOnce: 3
   freeSpaceRadius: 2
   freeSpaceTries: 10
 --- !u!1 &967338283
@@ -1560,6 +1560,14 @@ PrefabInstance:
     - target: {fileID: 4851051526605679076, guid: ad4970fe6a02c0c47822e3cc7dc2bae3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702075164151527636, guid: ad4970fe6a02c0c47822e3cc7dc2bae3, type: 3}
+      propertyPath: maxSpeed
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702075164151527636, guid: ad4970fe6a02c0c47822e3cc7dc2bae3, type: 3}
+      propertyPath: acceleration
+      value: 292
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
