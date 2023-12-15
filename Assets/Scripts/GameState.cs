@@ -7,6 +7,11 @@ public class GameState : MonoBehaviour
     public GameObject endMenu;
     public SceneSwitcher sceneSwitcher;
     public Timer gameTimer;
+
+    void Start()
+    {
+        Time.timeScale = 1f;
+    } 
     
     void FixedUpdate()
     {
@@ -15,11 +20,5 @@ public class GameState : MonoBehaviour
             Time.timeScale = 0f;
             endMenu.SetActive(true);
         }
-    }
-
-    public void RestartLevel()
-    {
-        Time.timeScale = 1f;
-        sceneSwitcher.RestartScene();
     }
 }
