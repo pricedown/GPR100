@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1607669403030930443}
   - component: {fileID: 6337713237750482710}
   - component: {fileID: 6994934734796810953}
-  - component: {fileID: 7550392998920794701}
+  - component: {fileID: 2817190091254513986}
   m_Layer: 0
-  m_Name: Collectable
-  m_TagString: Collectable
+  m_Name: Hole
+  m_TagString: breakThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.36, y: 2.84, z: 0}
-  m_LocalScale: {x: 1.67, y: 1.67, z: 1.67}
+  m_LocalScale: {x: 1.91, y: 1.91, z: 1.91}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,9 +74,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.65882355, g: 1, b: 1, a: 0.7294118}
+  m_Color: {r: 0.11889679, g: 0.06065327, b: 0.4433962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -115,13 +115,13 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7550392998920794701
+--- !u!114 &2817190091254513986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,10 +130,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5849243574841479766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93b0eebfa3e805299293e1a922e726f, type: 3}
+  m_Script: {fileID: 11500000, guid: a7e319409505e36128f87b1f9769c064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 1
-  circlePrefab: {fileID: 5849243574841479766, guid: 6e4bf1a403bb792e088a6e80d5304336, type: 3}
-  holePrefab: {fileID: 5849243574841479766, guid: 853c746956849a91e959e8bc2f512024, type: 3}
-  expandTime: 2.3
+  lifetime: 25

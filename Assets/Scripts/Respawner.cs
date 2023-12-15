@@ -39,7 +39,12 @@ public class Respawner : MonoBehaviour
         Vector3? spawnLocation = FindFreeSpace();
         if (spawnLocation == null)
         {
-            Debug.Log("Out of tries!");
+            Debug.Log("Out of tries!"); 
+            GameObject[] holeObjects = GameObject.FindGameObjectsWithTag("breakThrough");
+            if (holeObjects.Length > 0)
+            {
+                Destroy(holeObjects[Random.Range(0, holeObjects.Length)]);
+            }
         }
         else
         {
