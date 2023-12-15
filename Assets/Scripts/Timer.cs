@@ -44,7 +44,7 @@ public class Timer : MonoBehaviour
     {
         if (counting)
         {
-            display.text = countDown.ToString("F0");
+            display.text = Mathf.Ceil(countDown).ToString("F0");
         }
     }
     

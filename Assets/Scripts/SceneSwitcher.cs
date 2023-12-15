@@ -14,13 +14,26 @@ public class SceneSwitcher : MonoBehaviour
         sceneListCount = SceneManager.sceneCountInBuildSettings;
     }
 
+    public void LoadScene(int i)
+    {
+        SceneManager.LoadScene(i);
+    }
+    
     public void LoopScene()
     {
         SceneManager.LoadScene((thisSceneIndex + 1) % sceneListCount);
     }
 
-    public void LoadScene(int i)
+    public void RestartScene()
     {
-        SceneManager.LoadScene(i);
+        SceneManager.LoadScene(thisSceneIndex);
     }
+
+    public void ExitGame()
+    {
+        Debug.Log("Exiting game, goodbye!");
+        Application.Quit();
+    }
+
+
 }

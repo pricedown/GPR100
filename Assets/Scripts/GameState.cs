@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
+    public GameObject endMenu;
     public SceneSwitcher sceneSwitcher;
     public Timer gameTimer;
     
@@ -12,11 +13,13 @@ public class GameState : MonoBehaviour
         if (gameTimer.isDone())
         {
             Time.timeScale = 0f;
+            endMenu.SetActive(true);
         }
     }
 
-    void Update()
+    public void RestartLevel()
     {
-        
+        Time.timeScale = 1f;
+        sceneSwitcher.RestartScene();
     }
 }
